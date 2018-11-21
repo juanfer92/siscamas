@@ -1697,6 +1697,8 @@ class ReportesController extends Controller
 
     if (
     ) {
+    if (condition) {
       // code...
+    }
     }
 }
