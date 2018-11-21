@@ -1695,10 +1695,5 @@ class ReportesController extends Controller
         exit;
     }
 
-    if (
-    ) {
-    if (condition) {
-      // code...
-    }
-    }
+  
 }
