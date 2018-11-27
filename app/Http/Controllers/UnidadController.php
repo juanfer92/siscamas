@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use sisCamas\Auditoria;
 use sisCamas\Http\Requests\UnidadFormRequest;
 use sisCamas\Unidad;
+use Alert;
 
 class UnidadController extends Controller
 {
@@ -62,7 +63,7 @@ class UnidadController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('unidad');
     }
 
@@ -104,7 +105,7 @@ class UnidadController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('unidad');
     }
 
@@ -129,7 +130,7 @@ class UnidadController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Deshabilitado Correctamente');
+        Alert::success('Registro Deshabilitado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('unidad');
     }
 }

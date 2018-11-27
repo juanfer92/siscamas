@@ -1,6 +1,7 @@
 @extends ('layouts.admin')
 @section ('contenido')
 <!-- Small boxes (Stat box) -->
+@include('notification')
   <div class="row">
       @foreach ($numpaciente as $npac)
     <div class="col-lg-3 col-xs-6">

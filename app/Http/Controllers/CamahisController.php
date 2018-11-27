@@ -37,6 +37,13 @@ class CamahisController extends Controller
             ->where('ch.ID_HCAMA', '=', $id)
             ->first();
 
+            //convertimos la fecha 1 a objeto Carbon
+    $carbon1 = new \Carbon\Carbon("2018-02-02 01:00:00");
+    //convertimos la fecha 2 a objeto Carbon
+    $carbon2 = new \Carbon\Carbon("2018-02-02 03:00:00");
+    //de esta manera sacamos la diferencia en minutos
+    $minutesDiff=$carbon1->diffInHours($carbon2);
+            dd($minutesDiff);
         return view("camahis.show", compact('camahis'));
     }
 

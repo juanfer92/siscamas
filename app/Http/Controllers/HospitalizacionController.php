@@ -14,6 +14,7 @@ use sisCamas\Hospitalizacion;
 use sisCamas\Http\Requests\HospitalizacionFormRequest;
 use sisCamas\Paciente;
 use sisCamas\Patologia;
+use Alert;
 
 class HospitalizacionController extends Controller
 {
@@ -121,7 +122,7 @@ class HospitalizacionController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('hospitalizacion');
     }
 
@@ -207,9 +208,9 @@ class HospitalizacionController extends Controller
             $audit->save();
             //FIN Logs de Auditoria
 
-            session()->flash('flash_message', 'El Egreso del Paciente se realizo correctamente, las camas estan disponibles');
+            Alert::success('El egreso se realizo correctamente, las camas estan disponibles', ' Mensaje de Confirmación');
         } else {
-            session()->flash('flash_message', 'No se puede realizar el Egreso del paciente aun no ha llenado la encuesta');
+            Alert::error('El Paciente necesita llenar la encuesta para se dado de alta.');
         }
 
         return Redirect::to('hospitalizacion');

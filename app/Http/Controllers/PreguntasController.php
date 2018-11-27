@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use sisCamas\Auditoria;
 use sisCamas\Http\Requests\PreguntaFormRequest;
-//use Maatwebsite\Excel\Facades\Excel;
+use Alert;
 use sisCamas\Preguntas;
 
 class PreguntasController extends Controller
@@ -62,7 +62,7 @@ class PreguntasController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('pregunta');
     }
 
@@ -104,7 +104,7 @@ class PreguntasController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('pregunta');
     }
 
@@ -130,7 +130,7 @@ class PreguntasController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Deshabilitado Correctamente');
+        Alert::success('Registro Deshabilitado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('pregunta');
     }
 

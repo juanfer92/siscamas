@@ -10,6 +10,7 @@ use sisCamas\Auditoria;
 use sisCamas\Http\Requests\UserFormRequest;
 use sisCamas\Sucursal;
 use sisCamas\User;
+use Alert;
 
 class UserController extends Controller
 {
@@ -65,7 +66,7 @@ class UserController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('users');
     }
 
@@ -103,7 +104,7 @@ class UserController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('users');
     }
 
@@ -127,7 +128,7 @@ class UserController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Eliminado Correctamente');
+        Alert::success('Registro Deshabilitado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('users');
     }
 

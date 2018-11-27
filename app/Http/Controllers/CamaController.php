@@ -10,6 +10,7 @@ use sisCamas\Cama;
 use sisCamas\Estadocama;
 use sisCamas\Http\Requests\CamaFormRequest;
 use sisCamas\Tipocama;
+use Alert;
 
 class CamaController extends Controller
 {
@@ -79,7 +80,7 @@ class CamaController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('cama');
     }
 
@@ -128,7 +129,7 @@ class CamaController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('cama');
     }
 
@@ -138,7 +139,6 @@ class CamaController extends Controller
         $cama->ID_ESTCAM = 3;
         $cama->update();
         //INICIO Logs de Auditoria
-        $input             = serialize($request->all());
         $audit             = new Auditoria;
         $idUser            = \Auth::user()->id;
         $idname            = \Auth::user()->name;
@@ -147,14 +147,14 @@ class CamaController extends Controller
         $audit->ACCION     = 'DESHABILITAR';
         $audit->OBJETO     = 'CAMA';
         $audit->EQUIPO     = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-        $audit->SENTENCIA  = $input;
+        $audit->SENTENCIA  = 'Cama Deshabilitada';
         $ip                = $_SERVER['HTTP_USER_AGENT'];
         $audit->NAVEGADOR  = $ip;
         $audit->FECHA      = date("Y-m-d H:i:s");
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Deshabilitado Correctamente');
+        Alert::success('Registro Deshabilitado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('cama');
     }
 }

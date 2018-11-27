@@ -3,7 +3,10 @@
 namespace sisCamas\Http\Controllers;
 
 use DB;
+use Illuminate\Database\Eloquent\Model;
 use sisCamas\Http\Controllers\Controller;
+use TJGazel\Toastr\Facades\Toastr;
+use Alert;
 
 class HomeController extends Controller
 {
@@ -341,9 +344,9 @@ class HomeController extends Controller
             ])
             ->options([]);
 
+            $numpaciente = DB::table('totpacientes')->get();
 
 
-    $numpaciente = DB::table('totpacientes')->get();
 
         return view('home', compact('numpaciente', 'chartjs', 'chartjs2', 'chartjs3', 'chartjs4'));
     }

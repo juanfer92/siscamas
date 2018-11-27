@@ -483,6 +483,8 @@ Route::get('reportecuidadointensivosmaternal','ReportesController@reportecuidado
 //Route::resource('hospital/dashboard','DashboardController');
 //Route::resource('hospital/dashboard','DashboardController');
   Route::resource('codigos','BarcodeController');
+
+  Route::get('notificacion', 'DemoController@notificacion');
   //Route::get('/infocamas','InformacioncamasController@index');
   //Route::get('/infocamas','InformacioncamasController@index');
   //Route::get('transferencia','TransferenciaController@index');

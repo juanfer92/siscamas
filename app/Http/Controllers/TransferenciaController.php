@@ -12,6 +12,7 @@ use sisCamas\Camahis;
 use sisCamas\DetalleHospitalizacion;
 use sisCamas\Http\Requests\TransferenciaFormRequest;
 use sisCamas\Transferencia;
+use Alert;
 
 class TransferenciaController extends Controller
 {
@@ -113,7 +114,7 @@ class TransferenciaController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Transferencia Realizada Correctamente');
+        Alert::success('Transferencia Realizada Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('transferencia');
     }
 

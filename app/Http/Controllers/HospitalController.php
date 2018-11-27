@@ -9,6 +9,7 @@ use sisCamas\Auditoria;
 //use Illuminate\Support\Facades\Input; //Para subir imagen
 use sisCamas\Hospital;
 use sisCamas\Http\Requests\HospitalFormRequest;
+use Alert;
 
 class HospitalController extends Controller
 {
@@ -17,8 +18,7 @@ class HospitalController extends Controller
 
     }
 
-    public function index(Request $request)
-    {
+    public function index(Request $request)  {
         if ($request) {
             $query      = trim($request->get('searchText'));
             $hospitales = DB::table('hospital')
@@ -60,7 +60,7 @@ class HospitalController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('hospital')->with('info', 'Hospital Creada con Éxito');
     }
 
@@ -101,7 +101,7 @@ class HospitalController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('hospital');
     }
 
@@ -126,7 +126,7 @@ class HospitalController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Deshabilitado Correctamente');
+        Alert::success('Registro Deshabilitado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('hospital');
     }
 

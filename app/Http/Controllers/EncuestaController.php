@@ -9,6 +9,7 @@ use sisCamas\Encuesta;
 use sisCamas\Http\Requests\EncuestaFormRequest;
 //use Maatwebsite\Excel\Facades\Excel;
 use sisCamas\Paciente;
+use Alert;
 
 class EncuestaController extends Controller
 {
@@ -65,7 +66,7 @@ class EncuestaController extends Controller
             $cont = $cont + 1;
         }
 
-        session()->flash('flash_message', 'Encuesta Realizada Correctamente');
+        Alert::success('Encuesta Realizada Con Éxito', ' Mensaje de Confirmación');
         return redirect()->away('http://localhost/');
     }
 

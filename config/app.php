@@ -167,7 +167,8 @@ return [
         Fx3costa\LaravelChartJs\Providers\ChartjsServiceProvider::class,
         Tavo\EcLaravelValidator\EcValidatorServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-        //ConsoleTVs\Charts\ChartsServiceProvider::class,
+        //UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
     ],
 
@@ -225,6 +226,8 @@ return [
         'Excel'        => Maatwebsite\Excel\Facades\Excel::class,
         'Charts'       => ConsoleTVs\Charts\Facades\Charts::class,
         'PDF'          => Barryvdh\DomPDF\Facade::class,
+        //'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class
 
     ],
 

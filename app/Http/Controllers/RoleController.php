@@ -9,6 +9,7 @@ use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use sisCamas\Auditoria;
+use Alert;
 
 class RoleController extends Controller
 {
@@ -63,7 +64,7 @@ class RoleController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('roles');
     }
 
@@ -107,7 +108,7 @@ class RoleController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('roles');
     }
 
@@ -130,7 +131,7 @@ class RoleController extends Controller
         $audit->FECHA      = date("Y-m-d H:i:s");
         $audit->save();
         //FIN Logs de Auditoria
-        session()->flash('flash_message', 'Registro Eliminado Correctamente');
+        Alert::success('Registro Eliminado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('roles');
     }
 

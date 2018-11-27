@@ -12,6 +12,7 @@ use sisCamas\Exports\UsersExport;
 //use Maatwebsite\Excel\Facades\Excel;
 use sisCamas\Http\Requests\SucursalFormRequest;
 use sisCamas\Sucursal;
+use Alert;
 
 class SucursalController extends Controller
 {
@@ -69,7 +70,7 @@ class SucursalController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('sucursal');
     }
 
@@ -113,7 +114,7 @@ class SucursalController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('sucursal');
     }
 
@@ -139,7 +140,7 @@ class SucursalController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Deshabilitado Correctamente');
+        Alert::success('Registro Deshabilitado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('sucursal');
     }
 

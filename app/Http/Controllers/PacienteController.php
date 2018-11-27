@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use sisCamas\Auditoria;
 use sisCamas\Http\Requests\PacienteFormRequest;
 use sisCamas\Paciente;
+use Alert;
 
 class PacienteController extends Controller
 {
@@ -80,7 +81,7 @@ class PacienteController extends Controller
         $audit->save();
         //FIN Logs de Auditoria
 
-        session()->flash('flash_message', 'Registro Creado Correctamente');
+        Alert::success('Registro Creado Con Éxito', ' Mensaje de Confirmación');
         return Redirect::to('paciente');
     }
 
@@ -126,7 +127,7 @@ class PacienteController extends Controller
             echo "ingreso";
         }
 
-        session()->flash('flash_message', 'Registro Editado Correctamente');
+        Alert::success('Registro Actualizado Con Éxito', ' Mensaje de Confirmación');
         $paciente->update();
 
         //INICIO Logs de Auditoria
