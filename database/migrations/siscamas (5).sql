@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2018 a las 16:46:00
+-- Tiempo de generación: 28-11-2018 a las 18:26:42
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -381,7 +381,72 @@ INSERT INTO `auditoria` (`ID_AUD`, `ID_USUARIO`, `USUARIO`, `ACCION`, `OBJETO`, 
 (352, 26, 'Juan Criollo', 'ACTUALIZAR', 'CAMA', 'a:7:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"KAER7jCEhPu9MxsQGEfEuZczeAm0HVQl5VBtqr5A\";s:11:\"idsubunidad\";s:1:\"8\";s:10:\"idtipocama\";s:1:\"1\";s:12:\"idestadocama\";s:1:\"1\";s:11:\"observacion\";N;s:6:\"codigo\";s:7:\"GIN-002\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', '2018-11-16 00:53:10'),
 (353, 26, 'Juan Criollo', 'ACTUALIZAR', 'CAMA', 'a:7:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"KAER7jCEhPu9MxsQGEfEuZczeAm0HVQl5VBtqr5A\";s:11:\"idsubunidad\";s:1:\"8\";s:10:\"idtipocama\";s:1:\"1\";s:12:\"idestadocama\";s:1:\"1\";s:11:\"observacion\";N;s:6:\"codigo\";s:7:\"GIN-003\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', '2018-11-16 00:53:31'),
 (354, 26, 'Juan Criollo', 'CREAR', 'CAMA', 'a:6:{s:6:\"_token\";s:40:\"KAER7jCEhPu9MxsQGEfEuZczeAm0HVQl5VBtqr5A\";s:11:\"idsubunidad\";s:2:\"10\";s:10:\"idtipocama\";s:2:\"13\";s:12:\"idestadocama\";s:1:\"1\";s:11:\"observacion\";N;s:6:\"codigo\";s:9:\"TINEO-001\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', '2018-11-16 01:00:38'),
-(355, 26, 'Juan Criollo', 'CREAR', 'CAMA', 'a:6:{s:6:\"_token\";s:40:\"KAER7jCEhPu9MxsQGEfEuZczeAm0HVQl5VBtqr5A\";s:11:\"idsubunidad\";s:2:\"11\";s:10:\"idtipocama\";s:2:\"14\";s:12:\"idestadocama\";s:1:\"1\";s:11:\"observacion\";N;s:6:\"codigo\";s:9:\"TIMAT-001\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', '2018-11-16 01:02:28');
+(355, 26, 'Juan Criollo', 'CREAR', 'CAMA', 'a:6:{s:6:\"_token\";s:40:\"KAER7jCEhPu9MxsQGEfEuZczeAm0HVQl5VBtqr5A\";s:11:\"idsubunidad\";s:2:\"11\";s:10:\"idtipocama\";s:2:\"14\";s:12:\"idestadocama\";s:1:\"1\";s:11:\"observacion\";N;s:6:\"codigo\";s:9:\"TIMAT-001\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36', '2018-11-16 01:02:28'),
+(356, 26, 'Juan Criollo', 'ACTUALIZAR', 'SUCURSAL', 'a:7:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:10:\"idhospital\";s:1:\"1\";s:11:\"descripcion\";s:6:\"Matriz\";s:9:\"direccion\";s:45:\"Av. De los Naranjos N44-463 y De las Azucenas\";s:8:\"telefono\";s:10:\"9545494776\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:52:57'),
+(357, 26, 'Juan Criollo', 'ACTUALIZAR', 'SUCURSAL', 'a:7:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:10:\"idhospital\";s:1:\"1\";s:11:\"descripcion\";s:6:\"Matriz\";s:9:\"direccion\";s:45:\"Av. De los Naranjos N44-463 y De las Azucenas\";s:8:\"telefono\";s:10:\"9545494776\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:53:25'),
+(358, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:53:39');
+INSERT INTO `auditoria` (`ID_AUD`, `ID_USUARIO`, `USUARIO`, `ACCION`, `OBJETO`, `SENTENCIA`, `EQUIPO`, `NAVEGADOR`, `FECHA`) VALUES
+(359, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:54:04'),
+(360, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:55:08'),
+(361, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:55:25'),
+(362, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:55:46'),
+(363, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:56:22'),
+(364, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 19:56:44'),
+(365, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:02:27'),
+(366, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:06:55'),
+(367, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:07:23'),
+(368, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:10:51'),
+(369, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"LphALXa5phUOHPAyQYevV5YYoCFEz7dxLT6S83LJ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:10:59'),
+(370, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:31:13'),
+(371, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"T3NfhOLvR8hXciAOMxW4GukCFvEIKfeb9KTVBdqZ\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:31:26'),
+(372, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"4XmCAxpld17WoWez8xrVCIWrzZYGgqYZLE4RPpJE\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:54:35'),
+(373, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:54:42'),
+(374, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"4XmCAxpld17WoWez8xrVCIWrzZYGgqYZLE4RPpJE\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:54:50'),
+(375, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 20:56:16'),
+(376, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:17:25'),
+(377, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:19:55'),
+(378, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:20:57'),
+(379, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:21:11'),
+(380, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:21:54'),
+(381, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:22:16'),
+(382, 26, 'Juan Criollo', 'CREAR', 'HOSPITAL', 'a:6:{s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:6:\"nombre\";s:18:\"hgfdmgnsgbdsfdvsdf\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:13:\"kjhgfsdfvsdfv\";s:9:\"direccion\";s:19:\"kjhgfsdfvsdfvfgdfgh\";s:8:\"telefono\";s:12:\"876564567567\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:32:24'),
+(383, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:32:32'),
+(384, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:6:\"nombre\";s:18:\"hgfdmgnsgbdsfdvsdf\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:13:\"kjhgfsdfvsdfv\";s:9:\"direccion\";s:19:\"kjhgfsdfvsdfvfgdfgh\";s:8:\"telefono\";s:12:\"876564567567\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:32:43'),
+(385, 26, 'Juan Criollo', 'DESHABILITAR', 'HOSPITAL', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:35:44'),
+(386, 26, 'Juan Criollo', 'ACTUALIZAR', 'HOSPITAL', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:6:\"nombre\";s:40:\"Hospital Gineco Obstétrico Isidro Ayora\";s:3:\"ruc\";s:13:\"1722044839001\";s:16:\"reg_msp_hospital\";s:12:\"REG_12355555\";s:9:\"direccion\";s:38:\"Av Gran Colombia N14-66 y Luis Sodiro.\";s:8:\"telefono\";s:10:\"02-2542935\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:35:56'),
+(387, 26, 'Juan Criollo', 'DESHABILITAR', 'PATOLOGÍA', '9', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:45:13'),
+(388, 26, 'Juan Criollo', 'DESHABILITAR', 'PATOLOGÍA', '9', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:45:45'),
+(389, 26, 'Juan Criollo', 'DESHABILITAR', 'PATOLOGÍA', '9', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:45:58'),
+(390, 26, 'Juan Criollo', 'DESHABILITAR', 'PREGUNTA', '1', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:46:32'),
+(391, 26, 'Juan Criollo', 'ACTUALIZAR', 'PREGUNTA', 'a:5:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:10:\"idservicio\";s:1:\"1\";s:11:\"descripcion\";s:17:\"La comida ha sido\";s:6:\"estado\";s:6:\"Activa\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:46:42'),
+(392, 26, 'Juan Criollo', 'DESHABILITAR', 'PATOLOGÍA', '9', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:48:32'),
+(393, 26, 'Juan Criollo', 'ACTUALIZAR', 'PATOLOGÍA', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:11:\"descripcion\";s:21:\"Distensión abdominal\";s:7:\"sintoma\";s:467:\"Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.\";s:11:\"diagnostico\";N;s:13:\"procedimiento\";N;s:9:\"tpaciente\";s:7:\"Neonato\";s:6:\"estado\";s:6:\"Activa\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:48:56'),
+(394, 26, 'Juan Criollo', 'DESHABILITAR', 'PATOLOGÍA', '9', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:57:53'),
+(395, 26, 'Juan Criollo', 'ACTUALIZAR', 'PATOLOGÍA', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:11:\"descripcion\";s:21:\"Distensión abdominal\";s:7:\"sintoma\";s:467:\"Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.\";s:11:\"diagnostico\";N;s:13:\"procedimiento\";N;s:9:\"tpaciente\";s:7:\"Neonato\";s:6:\"estado\";s:6:\"Activa\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:58:06'),
+(396, 26, 'Juan Criollo', 'DESHABILITAR', 'CAMA', 'Cama Deshabilitada', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 22:59:42'),
+(397, 26, 'Juan Criollo', 'ACTUALIZAR', 'CAMA', 'a:7:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:11:\"idsubunidad\";s:1:\"8\";s:10:\"idtipocama\";s:1:\"1\";s:12:\"idestadocama\";s:1:\"1\";s:11:\"observacion\";N;s:6:\"codigo\";s:7:\"GIN-001\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 23:00:07'),
+(398, 26, 'Juan Criollo', 'ACTUALIZAR', 'PACIENTE', 'a:17:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:7:\"nombres\";s:5:\"Marta\";s:8:\"nombres1\";s:5:\"Maria\";s:9:\"apellidos\";s:5:\"Quito\";s:10:\"apellidos1\";s:5:\"Perez\";s:11:\"CI_PACIENTE\";s:10:\"1722044839\";s:4:\"edad\";s:2:\"18\";s:9:\"direccion\";s:7:\"Zambiza\";s:8:\"telefono\";s:8:\"22998834\";s:7:\"celular\";s:9:\"998137344\";s:5:\"email\";s:22:\"soporte@asegsur.com.ec\";s:9:\"contacto1\";s:15:\"Ricardo Davalos\";s:9:\"telefono1\";s:8:\"09998888\";s:9:\"contacto2\";s:4:\"Juan\";s:9:\"telefono2\";s:9:\"099887767\";s:9:\"reingreso\";s:7:\"Ingreso\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 23:00:44'),
+(399, 26, 'Juan Criollo', 'INGRESO', 'HOSPITALIZACION', 'a:12:{s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:10:\"idpaciente\";s:1:\"1\";s:12:\"idpatologiam\";s:2:\"25\";s:5:\"parto\";s:6:\"Normal\";s:7:\"pidcama\";s:1:\"2\";s:13:\"pidpatologian\";s:2:\"26\";s:5:\"nvivo\";s:2:\"Si\";s:4:\"sexo\";s:9:\"Masculino\";s:12:\"pobservacion\";N;s:6:\"idcama\";a:2:{i:0;s:2:\"10\";i:1;s:1:\"2\";}s:12:\"idpatologian\";a:2:{i:0;N;i:1;s:2:\"26\";}s:11:\"observacion\";a:2:{i:0;N;i:1;N;}}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 23:01:46'),
+(400, 26, 'Juan Criollo', 'ACTUALIZAR', 'TRANSFERENCIA', 'a:6:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";s:17:\"idhospitalizacion\";s:2:\"26\";s:6:\"idcama\";s:2:\"10\";s:9:\"idhospita\";s:2:\"16\";s:7:\"idncama\";s:1:\"6\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 23:02:53'),
+(401, 26, 'Juan Criollo', 'EGRESO', 'HOSPITALIZACION', 'a:2:{s:7:\"_method\";s:6:\"DELETE\";s:6:\"_token\";s:40:\"UyPvTFGDkBNDFppOQbHEGZgc7eZ6J50sEp865MnV\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-22 23:04:58'),
+(402, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-23 10:48:56'),
+(403, 26, 'Juan Criollo', 'ACTUALIZAR', 'PATOLOGÍA', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"3AMOB1BjNQjR6rVDYHfB5Y9tYNfN5aJqpeH8hCJX\";s:11:\"descripcion\";s:21:\"Distensión abdominal\";s:7:\"sintoma\";s:467:\"Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.\";s:11:\"diagnostico\";N;s:13:\"procedimiento\";N;s:9:\"tpaciente\";s:7:\"Neonato\";s:6:\"estado\";s:6:\"Activa\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-23 10:49:27'),
+(404, 26, 'Juan Criollo', 'ACTUALIZAR', 'PATOLOGÍA', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"3AMOB1BjNQjR6rVDYHfB5Y9tYNfN5aJqpeH8hCJX\";s:11:\"descripcion\";s:21:\"Distensión abdominal\";s:7:\"sintoma\";s:467:\"Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.\";s:11:\"diagnostico\";N;s:13:\"procedimiento\";N;s:9:\"tpaciente\";s:7:\"Neonato\";s:6:\"estado\";s:6:\"Activa\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-23 10:49:58'),
+(405, 26, 'Juan Criollo', 'ACTUALIZAR', 'PATOLOGÍA', 'a:8:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"3AMOB1BjNQjR6rVDYHfB5Y9tYNfN5aJqpeH8hCJX\";s:11:\"descripcion\";s:21:\"Distensión abdominal\";s:7:\"sintoma\";s:467:\"Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.\";s:11:\"diagnostico\";N;s:13:\"procedimiento\";N;s:9:\"tpaciente\";s:8:\"Maternal\";s:6:\"estado\";s:6:\"Activa\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-23 10:53:23'),
+(406, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-23 15:00:10'),
+(407, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 12:17:06'),
+(408, 26, 'Juan Criollo', 'DESHABILITAR', 'SUCURSAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 12:31:03'),
+(409, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 16:52:34'),
+(410, 26, 'Juan Criollo', 'DESHABILITAR', 'SUCURSAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:02:02'),
+(411, 26, 'Juan Criollo', 'DESHABILITAR', 'SUCURSAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:05:42'),
+(412, 26, 'Juan Criollo', 'DESHABILITAR', 'SUCURSAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:05:50'),
+(413, 26, 'Juan Criollo', 'DESHABILITAR', 'SUCURSAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:06:52'),
+(414, 26, 'Juan Criollo', 'DESHABILITAR', 'SUCURSAL', '2', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:07:01'),
+(415, 26, 'Juan Criollo', 'ACTUALIZAR', 'SUCURSAL', 'a:7:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";s:10:\"idhospital\";s:1:\"1\";s:11:\"descripcion\";s:10:\"Sucursal 1\";s:9:\"direccion\";s:37:\"Duchicela N18-59 y calle Princesa Toa\";s:8:\"telefono\";s:10:\"3057169600\";s:6:\"estado\";s:6:\"Activo\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:07:24'),
+(416, 26, 'Juan Criollo', 'ACTUALIZAR', 'PACIENTE', 'a:17:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";s:7:\"nombres\";s:6:\"Monica\";s:8:\"nombres1\";s:7:\"Mariela\";s:9:\"apellidos\";s:8:\"Amaguana\";s:10:\"apellidos1\";s:4:\"Iles\";s:11:\"CI_PACIENTE\";s:10:\"1721142501\";s:4:\"edad\";s:2:\"29\";s:9:\"direccion\";s:31:\"Segundo cueva celi llano grande\";s:8:\"telefono\";N;s:7:\"celular\";N;s:5:\"email\";N;s:9:\"contacto1\";N;s:9:\"telefono1\";N;s:9:\"contacto2\";N;s:9:\"telefono2\";N;s:9:\"reingreso\";s:7:\"Ingreso\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:15:04'),
+(417, 26, 'Juan Criollo', 'INGRESO', 'HOSPITALIZACION', 'a:10:{s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";s:10:\"idpaciente\";s:2:\"10\";s:12:\"idpatologiam\";s:2:\"25\";s:5:\"parto\";s:6:\"Normal\";s:7:\"pidcama\";s:1:\"8\";s:13:\"pidpatologian\";N;s:12:\"pobservacion\";N;s:6:\"idcama\";a:2:{i:0;s:1:\"2\";i:1;s:1:\"8\";}s:12:\"idpatologian\";a:2:{i:0;N;i:1;N;}s:11:\"observacion\";a:2:{i:0;N;i:1;N;}}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:15:59'),
+(418, 26, 'Juan Criollo', 'EGRESO', 'HOSPITALIZACION', 'a:2:{s:7:\"_method\";s:6:\"DELETE\";s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:17:54'),
+(419, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-28 12:17:20');
 
 -- --------------------------------------------------------
 
@@ -405,16 +470,16 @@ CREATE TABLE `cama` (
 --
 
 INSERT INTO `cama` (`ID_CAMA`, `ID_SUBUNIDAD`, `ID_TCAMA`, `ID_ESTCAM`, `COD_CAMA`, `OBSER_CAMA`, `updated_at`, `created_at`) VALUES
-(1, 8, 1, 1, 'GIN-001', NULL, '2018-11-16 05:52:06', '2018-09-27 16:11:39'),
-(2, 1, 2, 1, 'CAM-P1-002', NULL, '2018-11-16 03:49:34', '2018-10-11 16:16:36'),
+(1, 8, 1, 1, 'GIN-001', NULL, '2018-11-23 04:00:07', '2018-09-27 16:11:39'),
+(2, 1, 2, 1, 'CAM-P1-002', NULL, '2018-11-27 22:17:53', '2018-10-11 16:16:36'),
 (3, 1, 2, 1, 'CAM-P1-003', NULL, '2018-11-09 19:03:39', '2018-10-18 19:41:38'),
 (4, 8, 1, 1, 'GIN-002', NULL, '2018-11-16 05:53:09', '2018-10-20 03:35:19'),
 (5, 7, 3, 1, 'CAM-P1-005', NULL, '2018-11-16 03:49:34', '2018-10-20 04:30:01'),
-(6, 7, 3, 1, 'CAM-P1-006', NULL, '2018-11-14 16:46:08', '2018-11-08 04:47:21'),
+(6, 7, 3, 1, 'CAM-P1-006', NULL, '2018-11-23 04:04:57', '2018-11-08 04:47:21'),
 (7, 8, 1, 1, 'GIN-003', NULL, '2018-11-16 05:53:31', '2018-11-08 04:47:49'),
-(8, 7, 3, 1, 'CAM-P1-008', NULL, '2018-11-08 19:45:52', '2018-11-08 19:38:44'),
+(8, 7, 3, 1, 'CAM-P1-008', NULL, '2018-11-27 22:17:53', '2018-11-08 19:38:44'),
 (9, 4, 11, 1, 'QUI_P1_001', NULL, '2018-11-16 03:46:53', '2018-11-09 19:00:27'),
-(10, 3, 10, 1, 'COBS_CAM001', NULL, '2018-11-14 15:51:32', '2018-11-10 03:49:17'),
+(10, 3, 10, 1, 'COBS_CAM001', NULL, '2018-11-23 04:02:53', '2018-11-10 03:49:17'),
 (11, 1, 2, 1, 'CAM-P1-007', NULL, '2018-11-15 04:39:29', '2018-11-10 17:16:21'),
 (12, 7, 3, 1, 'HOS-P2-003', NULL, '2018-11-14 04:44:19', '2018-11-14 04:44:19'),
 (13, 10, 13, 1, 'TINEO-001', NULL, '2018-11-16 06:00:38', '2018-11-16 06:00:38'),
@@ -494,7 +559,12 @@ INSERT INTO `cama_his` (`ID_HCAMA`, `ID_CAMA`, `ID_HOSPITALIZACION`, `TRANSFEREN
 (40, 5, 14, 'Tranferencia', '2018-11-14', '2018-11-14 20:18:18', '2018-11-14 20:18:18'),
 (41, 9, 15, 'Asignación', '2018-11-15', '2018-11-16 03:45:53', '2018-11-16 03:45:53'),
 (42, 2, 15, 'Asignación', '2018-11-15', '2018-11-16 03:45:53', '2018-11-16 03:45:53'),
-(43, 5, 15, 'Tranferencia', '2018-11-15', '2018-11-16 03:46:53', '2018-11-16 03:46:53');
+(43, 5, 15, 'Tranferencia', '2018-11-15', '2018-11-16 03:46:53', '2018-11-16 03:46:53'),
+(44, 10, 16, 'Asignación', '2018-11-22', '2018-11-23 04:01:45', '2018-11-23 04:01:45'),
+(45, 2, 16, 'Asignación', '2018-11-22', '2018-11-23 04:01:45', '2018-11-23 04:01:45'),
+(46, 6, 16, 'Tranferencia', '2018-11-22', '2018-11-23 04:02:53', '2018-11-23 04:02:53'),
+(47, 2, 17, 'Asignación', '2018-11-27', '2018-11-27 22:15:57', '2018-11-27 22:15:57'),
+(48, 8, 17, 'Asignación', '2018-11-27', '2018-11-27 22:15:58', '2018-11-27 22:15:58');
 
 -- --------------------------------------------------------
 
@@ -543,7 +613,11 @@ INSERT INTO `detalle_hospitalizacion` (`ID_DET_HOSPITALIZACION`, `ID_PATOLOGIA`,
 (22, NULL, 14, 5, NULL, NULL, NULL, '2018-11-14 20:18:18', '2018-11-14 19:38:28'),
 (23, 26, 14, 2, NULL, NULL, NULL, '2018-11-14 19:38:28', '2018-11-14 19:38:28'),
 (24, NULL, 15, 5, NULL, NULL, NULL, '2018-11-16 03:46:53', '2018-11-16 03:45:53'),
-(25, NULL, 15, 2, NULL, NULL, NULL, '2018-11-16 03:45:53', '2018-11-16 03:45:53');
+(25, NULL, 15, 2, NULL, NULL, NULL, '2018-11-16 03:45:53', '2018-11-16 03:45:53'),
+(26, NULL, 16, 6, NULL, NULL, NULL, '2018-11-23 04:02:53', '2018-11-23 04:01:45'),
+(27, 26, 16, 2, NULL, NULL, NULL, '2018-11-23 04:01:45', '2018-11-23 04:01:45'),
+(28, NULL, 17, 2, NULL, NULL, NULL, '2018-11-27 22:15:57', '2018-11-27 22:15:57'),
+(29, NULL, 17, 8, NULL, NULL, NULL, '2018-11-27 22:15:57', '2018-11-27 22:15:57');
 
 -- --------------------------------------------------------
 
@@ -670,7 +744,21 @@ INSERT INTO `encuesta_reg` (`ID_ENCUESTA`, `ID_PREGUNTA`, `ID_PACIENTE`, `VALOR`
 (137, 4, 1, 'Regular', NULL, '2018-11-16 03:48:52', '2018-11-16 03:48:52'),
 (138, 5, 1, 'Buena', NULL, '2018-11-16 03:48:52', '2018-11-16 03:48:52'),
 (139, 6, 1, 'Regular', NULL, '2018-11-16 03:48:52', '2018-11-16 03:48:52'),
-(140, 7, 1, 'Mala', NULL, '2018-11-16 03:48:52', '2018-11-16 03:48:52');
+(140, 7, 1, 'Mala', NULL, '2018-11-16 03:48:52', '2018-11-16 03:48:52'),
+(141, 1, 1, 'Buena', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(142, 2, 1, 'Regular', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(143, 3, 1, 'Buena', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(144, 4, 1, 'Buena', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(145, 5, 1, 'Regular', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(146, 6, 1, 'Regular', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(147, 7, 1, 'Regular', NULL, '2018-11-23 04:04:29', '2018-11-23 04:04:29'),
+(148, 1, 10, 'Buena', NULL, '2018-11-27 22:16:57', '2018-11-27 22:16:57'),
+(149, 2, 10, 'Regular', NULL, '2018-11-27 22:16:57', '2018-11-27 22:16:57'),
+(150, 3, 10, 'Buena', NULL, '2018-11-27 22:16:58', '2018-11-27 22:16:58'),
+(151, 4, 10, 'Buena', NULL, '2018-11-27 22:16:58', '2018-11-27 22:16:58'),
+(152, 5, 10, 'Buena', NULL, '2018-11-27 22:16:58', '2018-11-27 22:16:58'),
+(153, 6, 10, 'Buena', NULL, '2018-11-27 22:16:58', '2018-11-27 22:16:58'),
+(154, 7, 10, 'Regular', NULL, '2018-11-27 22:16:58', '2018-11-27 22:16:58');
 
 -- --------------------------------------------------------
 
@@ -770,7 +858,9 @@ INSERT INTO `hospitalizacion` (`ID_HOSPITALIZACION`, `ID_PACIENTE`, `ID_PATOLOGI
 (12, 8, 25, 'Normal', '2018-11-14 11:58:58', '2018-11-14 12:14:34', 'Egreso', '2018-11-14 17:14:34', '2018-11-14 16:58:58'),
 (13, 9, 25, 'Normal', '2018-11-14 14:20:21', '2018-11-14 14:21:35', 'Egreso', '2018-11-14 19:21:35', '2018-11-14 19:20:21'),
 (14, 10, 25, 'Normal', '2018-11-14 14:38:28', '2018-11-14 15:48:32', 'Egreso', '2018-11-14 20:48:32', '2018-11-14 19:38:28'),
-(15, 1, 25, 'Normal', '2018-11-15 22:45:53', '2018-11-15 22:49:33', 'Egreso', '2018-11-16 03:49:33', '2018-11-16 03:45:53');
+(15, 1, 25, 'Normal', '2018-11-15 22:45:53', '2018-11-15 22:49:33', 'Egreso', '2018-11-16 03:49:33', '2018-11-16 03:45:53'),
+(16, 1, 25, 'Normal', '2018-11-22 23:01:45', '2018-11-22 23:04:57', 'Egreso', '2018-11-23 04:04:57', '2018-11-23 04:01:45'),
+(17, 10, 25, 'Normal', '2018-11-27 17:15:57', '2018-11-27 17:17:53', 'Egreso', '2018-11-27 22:17:53', '2018-11-27 22:15:57');
 
 -- --------------------------------------------------------
 
@@ -855,7 +945,7 @@ CREATE TABLE `pacientes` (
 --
 
 INSERT INTO `pacientes` (`ID_PACIENTE`, `ID_SUCURSAL`, `NOM_PACIENTE`, `APE_PACIENTE`, `NOM_PACIENTE1`, `CI_PACIENTE`, `NAC_PACIENTE`, `DIR_PACIENTE`, `TEL_PACIENTE`, `CEL_PACIENTE`, `EMAIL_PACIENTE`, `NOM_FAMILIAR`, `TELF_CONTACTO`, `NOM_FAMILIAR1`, `TELF_CONTACTO1`, `NOM_FAMILIAR2`, `TELF_CONTACTO2`, `EST_INGRE_EGRESO`, `FECHA_INGRESO`, `FECHA_EGRESO`, `APE_PACIENTE1`, `uuid`, `EDAD_PACIENTE`, `TSAN_PACIENTE`, `reg_encuesta`, `ASIG_PACIENTE`, `updated_at`, `created_at`) VALUES
-(1, 2, 'Marta', 'Quito', 'Maria', '1722044839', NULL, 'Zambiza', '22998834', '998137344', 'soporte@asegsur.com.ec', NULL, NULL, 'Ricardo Davalos', '09998888', 'Juan', '099887767', 'Egreso', '2018-11-15 22:44:24', '2018-11-15 22:49:34', 'Perez', '53394e23-2c58-46b1-a088-246ba7982481', '18', NULL, 1, 1, '2018-11-16 03:49:34', '2018-10-23 03:31:53'),
+(1, 2, 'Marta', 'Quito', 'Maria', '1722044839', NULL, 'Zambiza', '22998834', '998137344', 'soporte@asegsur.com.ec', NULL, NULL, 'Ricardo Davalos', '09998888', 'Juan', '099887767', 'Egreso', '2018-11-22 23:00:44', '2018-11-22 23:04:57', 'Perez', '53394e23-2c58-46b1-a088-246ba7982481', '18', NULL, 1, 1, '2018-11-23 04:04:57', '2018-10-23 03:31:53'),
 (2, 2, 'Fernanda', 'Rivadeneira', 'Maria', '1722044839', 'Ecuatoriana', 'Zambiza', '22998834', '998137344', 'soporte@asegsur.com.ec', NULL, NULL, 'Ricardo Davalos', '998137344', 'ANTONIO CRIOLLO', '0998137344', 'Egreso', '2018-11-09 12:27:25', '2018-11-09 20:24:33', 'Lopez', '5702dce7-2838-46b8-8fc2-79a875857580', '47', 'O+', 1, 1, '2018-11-15 02:09:48', '2018-11-03 15:16:44'),
 (3, 2, 'Cristina', 'Perez', 'Elizabeth', '1722044839', 'Ecuatoriana', 'El inca n12 y cipreces', '998137344', '09999999', 'juanfer92.jc@gmail.com', NULL, NULL, 'Juan Criollo', '998137344', 'Maria Gualpa', '0998274445', 'Egreso', '2018-11-09 12:27:32', '2018-11-09 22:36:24', 'Orozco', 'd017ab3b-af2b-4b44-8984-8c34e80290c0', '25', 'O+', 1, 1, '2018-11-14 16:21:39', '2018-11-08 04:19:04'),
 (4, 2, 'Keila', 'Obando', 'Paola', '1722044839', 'Ecuatoriana', 'San juan de Calderon n1-89', '022997500', '0998137344', 'kobs@gmail.com', NULL, NULL, 'Juan Criollo', '0998764543', NULL, NULL, 'Egreso', '2018-11-09 12:27:50', '2018-11-09 22:41:26', 'Sabando', 'd7b63fe1-0565-472b-b989-cb3b2b0ab9be', '26', 'O+', 1, 1, '2018-11-14 16:21:44', '2018-11-08 19:41:22'),
@@ -864,7 +954,7 @@ INSERT INTO `pacientes` (`ID_PACIENTE`, `ID_SUCURSAL`, `NOM_PACIENTE`, `APE_PACI
 (7, 2, 'Maricela', 'Acuna', 'Nathalia', '1717351256', NULL, 'La florestar n1 - 89 y galapagos', '022997500', '0998137344', 'dfdf@sdf.com', NULL, NULL, 'juan Criollo', '2997500', 'Maria Gualpa', '2997500', 'Egreso', '2018-11-12 15:29:54', '2018-11-14 11:46:38', 'Guanoluoisa', '934555d6-40bf-4ab1-9496-953ae3cadbce', '24', 'O-', 1, 1, '2018-11-14 16:46:38', '2018-11-12 20:29:54'),
 (8, 2, 'Evelyn', 'Intriago', 'Roxana', '1722044839', NULL, 'Av. 6 de diciembre y joaquin davalos esquina', '2997527', '0998137244', 'eveintri@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'Egreso', '2018-11-14 11:47:33', '2018-11-14 12:14:34', 'Davalos', '9c86e966-ffba-47bd-a16d-9133e53d9125', '27', 'O+', 1, 1, '2018-11-14 17:14:34', '2018-11-14 05:50:30'),
 (9, 2, 'Lorena', 'Almache', 'Gabriela', '1803526993', NULL, 'Queseras del medio el recreo.', '022997500', '0998137344', 'lore@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL, 'Egreso', '2018-11-14 14:19:28', '2018-11-14 14:21:36', 'Flores', '1db4741d-599e-4fad-ad37-2855a2ec0ee3', '29', 'O-', 1, 1, '2018-11-14 19:21:36', '2018-11-14 19:19:28'),
-(10, 2, 'Monica', 'Amaguana', 'Mariela', '1721142501', NULL, 'Segundo cueva celi llano grande', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Egreso', '2018-11-14 14:23:44', '2018-11-14 15:48:33', 'Iles', '02ea053b-6272-43be-b990-b39e1bb77fff', '29', 'A-', 1, 1, '2018-11-14 20:48:33', '2018-11-14 19:23:44');
+(10, 2, 'Monica', 'Amaguana', 'Mariela', '1721142501', NULL, 'Segundo cueva celi llano grande', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Egreso', '2018-11-27 17:15:03', '2018-11-27 17:17:53', 'Iles', '02ea053b-6272-43be-b990-b39e1bb77fff', '29', NULL, 1, 1, '2018-11-27 22:17:53', '2018-11-14 19:23:44');
 
 -- --------------------------------------------------------
 
@@ -901,7 +991,7 @@ CREATE TABLE `patologia` (
 --
 
 INSERT INTO `patologia` (`ID_PATOLOGIA`, `DESC_PATOLOGIA`, `SINTOMA`, `DIAGNOSTICO`, `PROCEDIMIENTO`, `TPACIENTE`, `EST_PATOLOGIA`, `updated_at`, `created_at`) VALUES
-(9, 'Distensión abdominal', 'Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.', NULL, NULL, 'Neonato', 'Activa', '2018-11-12 15:55:43', '2018-10-27 02:11:53'),
+(9, 'Distensión abdominal', 'Por lo general, las barrigas de la mayoría de los bebés sobresalen, especialmente después de una toma abundante. Sin embargo, entre las tomas, deben sentirse bastante blandas. Si el abdomen de su hijo se siente hinchado y duro, y si no ha tenido una deposición durante más de uno o dos días, o tiene vómitos, llame a su pediatra. Es muy probable que el problema se deba a gases o estreñimiento, pero también podría indicar un problema intestinal más grave.', NULL, NULL, 'Maternal', 'Activa', '2018-11-23 15:53:22', '2018-10-27 02:11:53'),
 (10, 'Lesiones durante el parto', 'Es posible que los bebés se lesionen durante el parto, especialmente si el trabajo de parto es particularmente largo o dificultoso, o cuando los bebés son muy grandes. Mientras que los recién nacidos se recuperan rápidamente de algunas de estas lesiones, otras persisten durante más tiempo. A menudo, la lesión es una clavícula rota, que se cura rápidamente si el brazo de ese lado se mantiene relativamente inmóvil. De hecho, puede formarse un pequeño bulto en el sitio de la fractura después de algunas semanas, pero no se asuste; este es un signo positivo de que se está formando hueso nuevo para curar la lesión.\r\n\r\nLa debilidad muscular es otra lesión de nacimiento común, causada durante el trabajo de parto por la presión o el estiramiento de los nervios conectados a los músculos. Por lo general, estos músculos, que suelen estar debilitados a un lado de la cara o de un hombro o brazo, vuelven a la normalidad después de varias semanas. Mientras tanto, pídale a su pediatra que le muestre cómo amamantar y sostener al bebé para promover la curación.', NULL, NULL, 'Neonato', 'Activa', '2018-10-27 02:14:07', '2018-10-27 02:12:18'),
 (11, 'Síndrome del bebé azul', 'Los bebés pueden tener las manos y los pies levemente azulados, pero es posible que esto no sea un motivo de preocupación. Si sus manos y pies se vuelven un poco azulados a causa del frío, deberían recuperar su color rosado apenas se calientan. Ocasionalmente, la cara, la lengua y los labios pueden volverse un poco azulados cuando el bebé no para de llorar, pero cuando se calma, su color en estas partes del cuerpo debe volver a la normalidad rápidamente. Sin embargo, si la piel se vuelve de un color azulado de manera persistente, especialmente con dificultades para respirar y alimentarse, esto es un signo de que el corazón o los pulmones no están funcionando correctamente, y de que el bebé no está recibiendo suficiente oxígeno en la sangre. La atención médica inmediata es fundamental.', NULL, NULL, 'Neonato', 'Activa', '2018-10-27 02:14:14', '2018-10-27 02:12:35'),
 (12, 'Tos', 'Si el bebé toma líquido muy rápido o trata de beber agua por primera vez, es posible que tosa y escupa un poco; pero este tipo de tos debería detenerse apenas se ajuste a una rutina de alimentación familiar. También puede estar relacionada con la fuerza o la rapidez con la que baja la leche de la mamá. Si el bebé tose continuamente o tiene arcadas rutinariamente durante las tomas, consulte con el pediatra. Estos síntomas podrían indicar un problema subyacente en los pulmones o el tracto digestivo.', NULL, NULL, 'Neonato', 'Activa', '2018-10-27 02:14:29', '2018-10-27 02:14:29'),
@@ -1117,7 +1207,7 @@ CREATE TABLE `preguntas` (
 --
 
 INSERT INTO `preguntas` (`ID_PREGUNTA`, `DESCRIPCION`, `ESTADO`, `ID_SERVICIO`, `updated_at`, `created_at`) VALUES
-(1, 'La comida ha sido', 'Activa', 1, '2018-11-12 16:23:46', '2018-10-30 22:05:23'),
+(1, 'La comida ha sido', 'Activa', 1, '2018-11-23 03:46:42', '2018-10-30 22:05:23'),
 (2, 'La limpieza en la sala de espera a sido:', 'Activa', 1, '2018-11-05 16:25:48', '2018-10-30 22:14:39'),
 (3, 'La calidad de la asistencia sanitaria por parte de la enfermer@ que usted ha recibido ha sido', 'Activa', 1, '2018-11-05 15:57:44', '2018-10-30 22:15:48'),
 (4, 'El trato de la enfermer@ del hospital con usted ha sido:', 'Activa', 3, '2018-11-05 15:56:13', '2018-11-05 15:56:13'),
@@ -1300,7 +1390,7 @@ CREATE TABLE `sucursales` (
 
 INSERT INTO `sucursales` (`ID_SUCURSAL`, `ID_HOSPITAL`, `DESCRIPCION`, `DIR_SUCURSAL`, `TELF_SUCURSAL`, `TIPO`, `EST_SUCURSAL`, `updated_at`, `created_at`) VALUES
 (1, 1, 'Matriz', 'Av. De los Naranjos N44-463 y De las Azucenas', '9545494776', NULL, 'Activo', '2018-11-07 03:02:05', '2018-09-23 04:25:58'),
-(2, 1, 'Sucursal 1', 'Duchicela N18-59 y calle Princesa Toa', '3057169600', 'Sucursal', 'Activo', '2018-10-04 16:49:07', '2018-09-23 04:27:16');
+(2, 1, 'Sucursal 1', 'Duchicela N18-59 y calle Princesa Toa', '3057169600', NULL, 'Activo', '2018-11-27 22:07:24', '2018-09-23 04:27:16');
 
 -- --------------------------------------------------------
 
@@ -1393,7 +1483,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `ID_SUCURSAL`) VALUES
-(26, 'Juan Criollo', 'jc@ads.com', NULL, '$2y$10$TJnfnPxwCYWlGXcRuJyEo.NskwO.fCcjhn/dZ9FIDoRJTJ7Afv9qi', 'w2l1khnJOu4uV26QgNff77f2Vbm5lWVin1KqhAeetOLakZ9YUZiCWY5j8emk', '2018-10-10 02:25:27', '2018-10-12 16:58:03', 2),
+(26, 'Juan Criollo', 'jc@ads.com', NULL, '$2y$10$TJnfnPxwCYWlGXcRuJyEo.NskwO.fCcjhn/dZ9FIDoRJTJ7Afv9qi', 'wdSZj8lERPV075lMoeEZhbFuItjsBilBBGzz3UP9bEeekJ0yFiVAremJOd5Y', '2018-10-10 02:25:27', '2018-10-12 16:58:03', 2),
 (27, 'Ricardo Davalos', 'sp@asur.ec', NULL, '$2y$10$ixWvV9iM7IieKz/rOJ9/4.aYyD1C7yk2w6iSdfMPOYmqVCELsnUKS', NULL, '2018-10-12 16:22:32', '2018-10-12 16:22:32', 1),
 (28, 'pepito', 'p@ads.com', NULL, '$2y$10$1u7cVLwmYvw3B1tqEZZo5uf8o07DtM1ZvISOVICi.frNj4B3Meb8e', 'rSBOqkJGIPCxV87zr4yZVNwycH7C6Hfs84HAibwk6V7mG2r5mRBR17NUMqD3', '2018-10-20 13:26:41', '2018-11-10 02:28:07', 2);
 
@@ -1651,7 +1741,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `ID_AUD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=356;
+  MODIFY `ID_AUD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=420;
 
 --
 -- AUTO_INCREMENT de la tabla `cama`
@@ -1663,19 +1753,19 @@ ALTER TABLE `cama`
 -- AUTO_INCREMENT de la tabla `cama_his`
 --
 ALTER TABLE `cama_his`
-  MODIFY `ID_HCAMA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `ID_HCAMA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_hospitalizacion`
 --
 ALTER TABLE `detalle_hospitalizacion`
-  MODIFY `ID_DET_HOSPITALIZACION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ID_DET_HOSPITALIZACION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `encuesta_reg`
 --
 ALTER TABLE `encuesta_reg`
-  MODIFY `ID_ENCUESTA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `ID_ENCUESTA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
 
 --
 -- AUTO_INCREMENT de la tabla `estado_cama`
@@ -1687,13 +1777,13 @@ ALTER TABLE `estado_cama`
 -- AUTO_INCREMENT de la tabla `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `ID_HOSPITAL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID_HOSPITAL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `hospitalizacion`
 --
 ALTER TABLE `hospitalizacion`
-  MODIFY `ID_HOSPITALIZACION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID_HOSPITALIZACION` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
