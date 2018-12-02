@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2018 a las 18:26:42
+-- Tiempo de generación: 02-12-2018 a las 16:36:39
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -446,7 +446,8 @@ INSERT INTO `auditoria` (`ID_AUD`, `ID_USUARIO`, `USUARIO`, `ACCION`, `OBJETO`, 
 (416, 26, 'Juan Criollo', 'ACTUALIZAR', 'PACIENTE', 'a:17:{s:7:\"_method\";s:3:\"PUT\";s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";s:7:\"nombres\";s:6:\"Monica\";s:8:\"nombres1\";s:7:\"Mariela\";s:9:\"apellidos\";s:8:\"Amaguana\";s:10:\"apellidos1\";s:4:\"Iles\";s:11:\"CI_PACIENTE\";s:10:\"1721142501\";s:4:\"edad\";s:2:\"29\";s:9:\"direccion\";s:31:\"Segundo cueva celi llano grande\";s:8:\"telefono\";N;s:7:\"celular\";N;s:5:\"email\";N;s:9:\"contacto1\";N;s:9:\"telefono1\";N;s:9:\"contacto2\";N;s:9:\"telefono2\";N;s:9:\"reingreso\";s:7:\"Ingreso\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:15:04'),
 (417, 26, 'Juan Criollo', 'INGRESO', 'HOSPITALIZACION', 'a:10:{s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";s:10:\"idpaciente\";s:2:\"10\";s:12:\"idpatologiam\";s:2:\"25\";s:5:\"parto\";s:6:\"Normal\";s:7:\"pidcama\";s:1:\"8\";s:13:\"pidpatologian\";N;s:12:\"pobservacion\";N;s:6:\"idcama\";a:2:{i:0;s:1:\"2\";i:1;s:1:\"8\";}s:12:\"idpatologian\";a:2:{i:0;N;i:1;N;}s:11:\"observacion\";a:2:{i:0;N;i:1;N;}}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:15:59'),
 (418, 26, 'Juan Criollo', 'EGRESO', 'HOSPITALIZACION', 'a:2:{s:7:\"_method\";s:6:\"DELETE\";s:6:\"_token\";s:40:\"CKDRUoLDAx3HBJ6UC81Pl1gJ5ous4T5MLBNcH5Kn\";}', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-27 17:17:54'),
-(419, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-28 12:17:20');
+(419, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-28 12:17:20'),
+(420, 26, 'Juan Criollo', 'INGRESO', 'ACCESO', 'Ingreso al Sistema', 'SOPORTET3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', '2018-11-29 10:53:25');
 
 -- --------------------------------------------------------
 
@@ -517,7 +518,6 @@ CREATE TABLE `cama_his` (
 --
 
 INSERT INTO `cama_his` (`ID_HCAMA`, `ID_CAMA`, `ID_HOSPITALIZACION`, `TRANSFERENCIA`, `FECHA_ESTADO`, `updated_at`, `created_at`) VALUES
-(1, 5, 1, 'Asignación', '2018-11-07', '2018-11-16 03:12:51', '2018-11-08 04:59:09'),
 (2, 1, 1, 'Asignación', '2018-11-07', '2018-11-16 03:12:58', '2018-11-08 04:59:09'),
 (3, 3, 1, 'Tranferencia', '2018-11-08', '2018-11-08 05:01:54', '2018-11-08 05:01:54'),
 (4, 6, 1, 'Tranferencia', '2018-11-08', '2018-11-08 05:03:08', '2018-11-08 05:03:08'),
@@ -1490,6 +1490,16 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 -- --------------------------------------------------------
 
 --
+-- Estructura Stand-in para la vista `vreporte`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `vreporte` (
+`IDHOSPITALIZACION` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura Stand-in para la vista `vsucunisub`
 -- (Véase abajo para la vista actual)
 --
@@ -1528,6 +1538,15 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `totpacientes`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `totpacientes`  AS  select (select count(0) from `pacientes`) AS `numtocpac`,(select count(0) from `pacientes` `p` where (`p`.`EST_INGRE_EGRESO` = 'Ingreso')) AS `numtocpaci`,(select count(0) from `pacientes` `p` where (`p`.`EST_INGRE_EGRESO` = 'Egreso')) AS `numtocpace`,(select count(0) from `cama` where (`cama`.`ID_ESTCAM` = 1)) AS `camasdispo`,(select count(0) from `cama` where (`cama`.`ID_ESTCAM` = 2)) AS `camasocu` ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vreporte`
+--
+DROP TABLE IF EXISTS `vreporte`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vreporte`  AS  select `h`.`ID_HOSPITALIZACION` AS `IDHOSPITALIZACION` from (((`cama_his` `ch` join `cama` `c` on((`ch`.`ID_CAMA` = `c`.`ID_CAMA`))) join `hospitalizacion` `h` on((`ch`.`ID_HOSPITALIZACION` = `h`.`ID_HOSPITALIZACION`))) join `pacientes` `p` on((`h`.`ID_PACIENTE` = `p`.`ID_PACIENTE`))) ;
 
 -- --------------------------------------------------------
 
@@ -1741,7 +1760,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `ID_AUD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=420;
+  MODIFY `ID_AUD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=421;
 
 --
 -- AUTO_INCREMENT de la tabla `cama`
