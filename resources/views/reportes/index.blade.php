@@ -84,7 +84,13 @@
                 </tr>
             </tbody>
         </table>
-        <center> <h3><strong>Reportes Solicitados</strong></h3></center>
+        <center>
+            <h3>
+                <strong>
+                    Reportes Solicitados
+                </strong>
+            </h3>
+        </center>
         <hr style="width: 100%; color: #f8b500; height: 1px; background-color:#f8b500;"/>
         <table class="table">
             <tbody>
@@ -109,46 +115,73 @@
                     </td>
                 </tr>
                 <tr>
-                  <td>
-                      <a href="{{url('reportecentrooquirurgico')}}" target="_blank">
-                          <button class="btn btn-primary btn-lg">
-                              <i aria-hidden="true" class="fa fa-file-pdf-o">
-                              </i>
-                              Centro Quirúrgico
-                          </button>
-                      </a>
-                  </td>
-                  <td>
-                      <a href="{{url('reportecuidadointensivosneonatales')}}" target="_blank">
-                          <button class="btn btn-primary btn-lg">
-                              <i aria-hidden="true" class="fa fa-file-pdf-o">
-                              </i>
-                              Cuidados Intensivos Neonatales
-                          </button>
-                      </a>
-                  </td>
+                    <td>
+                        <a href="{{url('reportecentrooquirurgico')}}" target="_blank">
+                            <button class="btn btn-primary btn-lg">
+                                <i aria-hidden="true" class="fa fa-file-pdf-o">
+                                </i>
+                                Centro Quirúrgico
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{url('reportecuidadointensivosneonatales')}}" target="_blank">
+                            <button class="btn btn-primary btn-lg">
+                                <i aria-hidden="true" class="fa fa-file-pdf-o">
+                                </i>
+                                Cuidados Intensivos Neonatales
+                            </button>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                  <td>
-                      <a href="{{url('reportecuidadointensivosmaternal')}}" target="_blank">
-                          <button class="btn btn-primary btn-lg">
-                              <i aria-hidden="true" class="fa fa-file-pdf-o">
-                              </i>
-                              Cuidados Intensivos Maternal
-                          </button>
-                      </a>
-                  </td>
-                  <td>
-                    <a href="{{url('reporteneonatologia')}}" target="_blank">
-                        <button class="btn btn-success btn-lg">
-                          <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-                            Reporte General de Camas
-                        </button>
-                    </a>
-                  </td>
+                    <td>
+                        <a href="{{url('reportecuidadointensivosmaternal')}}" target="_blank">
+                            <button class="btn btn-primary btn-lg">
+                                <i aria-hidden="true" class="fa fa-file-pdf-o">
+                                </i>
+                                Cuidados Intensivos Maternal
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+                        <a "="" class="btn btn-success btn-xs" href="{{ route('excel') }}" style="text-decoration:none">
+                            <button class="btn btn-success btn-lg">
+                                <i aria-hidden="true" class="fa fa-file-excel-o">
+                                </i>
+                                Reporte General de Camas
+                            </button>
+                        </a>
+                    </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <!-- Modal -->
+    <div aria-hidden="true" aria-labelledby="exampleModalLongTitle" class="modal fade" id="exampleModalLong" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        Filtro de fechas para reporte
+                    </h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="true">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button">
+                        Generar Reporte
+                    </button>
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

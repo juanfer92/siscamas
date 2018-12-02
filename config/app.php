@@ -227,7 +227,7 @@ return [
         'Charts'       => ConsoleTVs\Charts\Facades\Charts::class,
         'PDF'          => Barryvdh\DomPDF\Facade::class,
         //'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-        'Alert' => RealRashid\SweetAlert\Facades\Alert::class
+        'Alert'        => RealRashid\SweetAlert\Facades\Alert::class,
 
     ],
 

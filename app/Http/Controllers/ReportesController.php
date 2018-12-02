@@ -5,7 +5,6 @@ namespace sisCamas\Http\Controllers;
 use DB;
 //use Maatwebsite\Excel\Facades\Excel;
 use Fpdf;
-use PDF;
 
 class ReportesController extends Controller
 {
@@ -16,7 +15,7 @@ class ReportesController extends Controller
 
     }
 
-    public function reportesucursales()
+    public function reporteSucursales()
     {
         //obtiene registros de sucursales
         $registrosa = DB::table('sucursales as s')
@@ -93,7 +92,7 @@ class ReportesController extends Controller
         exit;
     }
 
-    public function reporteunidades()
+    public function reporteUnidades()
     {
         //obtiene registros de unidades activas e inactivas
         $registrosa = DB::table('unidad as u')
@@ -168,7 +167,7 @@ class ReportesController extends Controller
         exit;
     }
 
-    public function reportesubunidades()
+    public function reporteSubunidades()
     {
         //obtiene registros de subunidades activas e inactivas
         $registrosa = DB::table('subunidad as s')
@@ -257,7 +256,7 @@ class ReportesController extends Controller
         exit;
     }
 
-    public function reportetipocama()
+    public function reporteTipoCama()
     {
         //obtiene registros de tipos de camas activas e inactivas
         $registrosa = DB::table('tipo_cama')
@@ -324,7 +323,7 @@ class ReportesController extends Controller
         exit;
     }
 
-    public function reportecamasxunidad()
+    public function reporteCamasporUnidad()
     {
         //obtiene registros de camas por unidades  libre u ocuapadas
         $registrosd = DB::table('cama as c')
@@ -419,7 +418,7 @@ class ReportesController extends Controller
         exit;
     }
 
-    public function reporteneonatologia()
+    public function reporteNeonatologia()
     {
         //obtiene registros de camas por unidades  libre u ocuapadas
         $regneonatologia = DB::table('cama as c')
@@ -433,65 +432,65 @@ class ReportesController extends Controller
             ->orderBy('ID_CAMA')
             ->get();
 
-            $regdneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 1)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Neonatología')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regdneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 1)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Neonatología')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-            $regoneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 2)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Neonatología')
-                ->orderBy('ID_CAMA')
-                ->get();
-          $totcneo = DB::select('SELECT count(*) FROM cama c
+        $regoneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 2)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Neonatología')
+            ->orderBy('ID_CAMA')
+            ->get();
+        $totcneo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           WHERE s.DESC_SUBUNIDAD = "Neonatología"');
 
-          foreach ($totcneo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneo = $con;
-              }
-          }
+        foreach ($totcneo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneo = $con;
+            }
+        }
 
-          $totcneod = DB::select('SELECT count(*) FROM cama c
+        $totcneod = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Neonatología"
           AND c.ID_ESTCAM = 1');
 
-          foreach ($totcneod as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneod = $con;
-              }
-          }
+        foreach ($totcneod as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneod = $con;
+            }
+        }
 
-          $totcneoo = DB::select('SELECT count(*) FROM cama c
+        $totcneoo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Neonatología"
           AND c.ID_ESTCAM = 2');
 
-          foreach ($totcneoo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneoo = $con;
-              }
-          }
+        foreach ($totcneoo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneoo = $con;
+            }
+        }
 
         $pdf = new Fpdf();
         $pdf::AddPage();
@@ -513,10 +512,10 @@ class ReportesController extends Controller
         $pdf::SetTextColor(0, 0, 0); // Establece el color del texto
         $pdf::SetFillColor(255, 255, 255); // establece el color del fondo de la celda
         $pdf::SetFont("Arial", "", 9);
-            $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
-            $pdf::Ln();
+        $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
+        $pdf::Ln();
         $pdf::Ln();
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
@@ -631,7 +630,6 @@ class ReportesController extends Controller
           WHERE s.DESC_SUBUNIDAD = "Neonatología"
           order by ch.ID_HCAMA');
 
-
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
 
@@ -669,13 +667,11 @@ class ReportesController extends Controller
 
         //REPORTE DE UNIDADES CENTRO OBSTETRICO
 
-
-
         $pdf::Output();
         exit;
     }
 
-    public function reportecentroobstetrico()
+    public function reporteCentroObstetrico()
     {
         //obtiene registros de camas por unidades  libre u ocuapadas
         $regcobstetrico = DB::table('cama as c')
@@ -688,68 +684,68 @@ class ReportesController extends Controller
             ->where('s.DESC_SUBUNIDAD', '=', 'Centro Obstétrico')
             ->orderBy('ID_CAMA')
             ->get();
-            //dd($regneonatologia);
+        //dd($regneonatologia);
 
-            $regdneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 1)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Centro Obstétrico')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regdneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 1)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Centro Obstétrico')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-            $regoneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 2)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Centro Obstétrico')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regoneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 2)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Centro Obstétrico')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-          $totcneo = DB::select('SELECT count(*) FROM cama c
+        $totcneo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           WHERE s.DESC_SUBUNIDAD = "Centro Obstétrico"');
 
-          foreach ($totcneo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneo = $con;
-              }
-          }
+        foreach ($totcneo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneo = $con;
+            }
+        }
 
-          $totcneod = DB::select('SELECT count(*) FROM cama c
+        $totcneod = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Centro Obstétrico"
           AND c.ID_ESTCAM = 1');
 
-          foreach ($totcneod as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneod = $con;
-              }
-          }
+        foreach ($totcneod as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneod = $con;
+            }
+        }
 
-          $totcneoo = DB::select('SELECT count(*) FROM cama c
+        $totcneoo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Centro Obstétrico"
           AND c.ID_ESTCAM = 2');
 
-          foreach ($totcneoo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneoo = $con;
-              }
-          }
+        foreach ($totcneoo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneoo = $con;
+            }
+        }
 
         $pdf = new Fpdf();
         $pdf::AddPage();
@@ -771,10 +767,10 @@ class ReportesController extends Controller
         $pdf::SetTextColor(0, 0, 0); // Establece el color del texto
         $pdf::SetFillColor(255, 255, 255); // establece el color del fondo de la celda
         $pdf::SetFont("Arial", "", 9);
-            $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
-            $pdf::Ln();
+        $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
+        $pdf::Ln();
         $pdf::Ln();
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
@@ -889,7 +885,6 @@ class ReportesController extends Controller
           WHERE s.DESC_SUBUNIDAD = "Centro Obstétrico"
           order by ch.ID_HCAMA');
 
-
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
 
@@ -927,13 +922,11 @@ class ReportesController extends Controller
 
         //REPORTE DE UNIDADES CENTRO OBSTETRICO
 
-
-
         $pdf::Output();
         exit;
     }
 
-    public function reportecentrooquirurgico()
+    public function reporteCentrooQuirurgico()
     {
         //obtiene registros de camas por unidades  libre u ocuapadas
         $regcobstetrico = DB::table('cama as c')
@@ -946,68 +939,68 @@ class ReportesController extends Controller
             ->where('s.DESC_SUBUNIDAD', '=', 'Centro Quirúrgico')
             ->orderBy('ID_CAMA')
             ->get();
-            //dd($regneonatologia);
+        //dd($regneonatologia);
 
-            $regdneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 1)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Centro Quirúrgico')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regdneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 1)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Centro Quirúrgico')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-            $regoneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 2)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Centro Quirúrgico')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regoneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 2)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Centro Quirúrgico')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-          $totcneo = DB::select('SELECT count(*) FROM cama c
+        $totcneo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           WHERE s.DESC_SUBUNIDAD = "Centro Quirúrgico"');
 
-          foreach ($totcneo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneo = $con;
-              }
-          }
+        foreach ($totcneo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneo = $con;
+            }
+        }
 
-          $totcneod = DB::select('SELECT count(*) FROM cama c
+        $totcneod = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Centro Quirúrgico"
           AND c.ID_ESTCAM = 1');
 
-          foreach ($totcneod as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneod = $con;
-              }
-          }
+        foreach ($totcneod as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneod = $con;
+            }
+        }
 
-          $totcneoo = DB::select('SELECT count(*) FROM cama c
+        $totcneoo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Centro Quirúrgico"
           AND c.ID_ESTCAM = 2');
 
-          foreach ($totcneoo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneoo = $con;
-              }
-          }
+        foreach ($totcneoo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneoo = $con;
+            }
+        }
 
         $pdf = new Fpdf();
         $pdf::AddPage();
@@ -1029,10 +1022,10 @@ class ReportesController extends Controller
         $pdf::SetTextColor(0, 0, 0); // Establece el color del texto
         $pdf::SetFillColor(255, 255, 255); // establece el color del fondo de la celda
         $pdf::SetFont("Arial", "", 9);
-            $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
-            $pdf::Ln();
+        $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
+        $pdf::Ln();
         $pdf::Ln();
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
@@ -1147,7 +1140,6 @@ class ReportesController extends Controller
           WHERE s.DESC_SUBUNIDAD = "Centro Quirúrgico"
           order by ch.ID_HCAMA');
 
-
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
 
@@ -1200,68 +1192,68 @@ class ReportesController extends Controller
             ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Neonatales')
             ->orderBy('ID_CAMA')
             ->get();
-            //dd($regneonatologia);
+        //dd($regneonatologia);
 
-            $regdneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 1)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Neonatales')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regdneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 1)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Neonatales')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-            $regoneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 2)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Neonatales')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regoneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 2)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Neonatales')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-          $totcneo = DB::select('SELECT count(*) FROM cama c
+        $totcneo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Neonatales"');
 
-          foreach ($totcneo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneo = $con;
-              }
-          }
+        foreach ($totcneo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneo = $con;
+            }
+        }
 
-          $totcneod = DB::select('SELECT count(*) FROM cama c
+        $totcneod = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Neonatales"
           AND c.ID_ESTCAM = 1');
 
-          foreach ($totcneod as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneod = $con;
-              }
-          }
+        foreach ($totcneod as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneod = $con;
+            }
+        }
 
-          $totcneoo = DB::select('SELECT count(*) FROM cama c
+        $totcneoo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Neonatales"
           AND c.ID_ESTCAM = 2');
 
-          foreach ($totcneoo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneoo = $con;
-              }
-          }
+        foreach ($totcneoo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneoo = $con;
+            }
+        }
 
         $pdf = new Fpdf();
         $pdf::AddPage();
@@ -1283,10 +1275,10 @@ class ReportesController extends Controller
         $pdf::SetTextColor(0, 0, 0); // Establece el color del texto
         $pdf::SetFillColor(255, 255, 255); // establece el color del fondo de la celda
         $pdf::SetFont("Arial", "", 9);
-            $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
-            $pdf::Ln();
+        $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
+        $pdf::Ln();
         $pdf::Ln();
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
@@ -1401,7 +1393,6 @@ class ReportesController extends Controller
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Neonatales"
           order by ch.ID_HCAMA');
 
-
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 18);
 
@@ -1454,68 +1445,67 @@ class ReportesController extends Controller
             ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Maternos')
             ->orderBy('ID_CAMA')
             ->get();
-            //dd($regneonatologia);
 
-            $regdneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 1)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Maternos')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regdneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 1)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Maternos')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-            $regoneo = DB::table('cama as c')
-                ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
-                ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
-                ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
-                ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
-                ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
-                ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
-                ->where('c.ID_ESTCAM', '=', 2)
-                ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Maternos')
-                ->orderBy('ID_CAMA')
-                ->get();
+        $regoneo = DB::table('cama as c')
+            ->join('subunidad as s', 'c.ID_SUBUNIDAD', '=', 's.ID_SUBUNIDAD')
+            ->join('unidad as u', 's.ID_UNIDAD', '=', 'u.ID_UNIDAD')
+            ->join('sucursales as su', 'u.ID_SUCURSAL', '=', 'su.ID_SUCURSAL')
+            ->join('tipo_cama as tc', 'c.ID_TCAMA', '=', 'tc.ID_TCAMA')
+            ->join('estado_cama as ec', 'c.ID_ESTCAM', '=', 'ec.ID_ESTCAM')
+            ->select('c.ID_ESTCAM', 'c.ID_CAMA', 'c.COD_CAMA', 'c.OBSER_CAMA', 's.DESC_SUBUNIDAD', 'u.DESC_UNIDAD', 'su.DESCRIPCION', 'tc.DESC_TCAMA')
+            ->where('c.ID_ESTCAM', '=', 2)
+            ->where('s.DESC_SUBUNIDAD', '=', 'Cuidados Intensivos Maternos')
+            ->orderBy('ID_CAMA')
+            ->get();
 
-          $totcneo = DB::select('SELECT count(*) FROM cama c
+        $totcneo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Maternos"');
 
-          foreach ($totcneo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneo = $con;
-              }
-          }
+        foreach ($totcneo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneo = $con;
+            }
+        }
 
-          $totcneod = DB::select('SELECT count(*) FROM cama c
+        $totcneod = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Maternos"
           AND c.ID_ESTCAM = 1');
 
-          foreach ($totcneod as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneod = $con;
-              }
-          }
+        foreach ($totcneod as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneod = $con;
+            }
+        }
 
-          $totcneoo = DB::select('SELECT count(*) FROM cama c
+        $totcneoo = DB::select('SELECT count(*) FROM cama c
           join subunidad s on c.ID_SUBUNIDAD = s.ID_SUBUNIDAD
           join estado_cama e on c.ID_ESTCAM = e.ID_ESTCAM
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Maternos"
           AND c.ID_ESTCAM = 2');
 
-          foreach ($totcneoo as $com) {
-              $val = $com;
-              foreach ($val as $con) {
-                  $tneoo = $con;
-              }
-          }
+        foreach ($totcneoo as $com) {
+            $val = $com;
+            foreach ($val as $con) {
+                $tneoo = $con;
+            }
+        }
 
         $pdf = new Fpdf();
         $pdf::AddPage();
@@ -1537,10 +1527,10 @@ class ReportesController extends Controller
         $pdf::SetTextColor(0, 0, 0); // Establece el color del texto
         $pdf::SetFillColor(255, 255, 255); // establece el color del fondo de la celda
         $pdf::SetFont("Arial", "", 9);
-            $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
-            $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
-            $pdf::Ln();
+        $pdf::cell(60, 6, utf8_decode($tneo), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneod), 1, "", "L", true);
+        $pdf::cell(60, 6, utf8_decode($tneoo), 1, "", "L", true);
+        $pdf::Ln();
         $pdf::Ln();
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 14);
@@ -1655,7 +1645,6 @@ class ReportesController extends Controller
           WHERE s.DESC_SUBUNIDAD = "Cuidados Intensivos Maternos"
           order by ch.ID_HCAMA');
 
-
         $pdf::SetTextColor(35, 56, 113);
         $pdf::SetFont('Arial', 'B', 14);
 
@@ -1695,5 +1684,4 @@ class ReportesController extends Controller
         exit;
     }
 
-  
 }
